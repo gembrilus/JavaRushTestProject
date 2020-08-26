@@ -41,7 +41,7 @@ public class ShipController {
         List<Ship> list = service.getAllShips(name, planet, shipType,
                 after, before, isUsed,
                 minSpeed, maxSpeed, minCrewSize,
-                maxCrewSize, minRating, maxRating, order, pageNumber, pageSize);
+                maxCrewSize, minRating, maxRating, order);
         return service.getAllShipsByPage(pageNumber, pageSize, list);
     }
 
@@ -62,7 +62,7 @@ public class ShipController {
         return service.getAllShips(name, planet, shipType,
                 after, before, isUsed,
                 minSpeed, maxSpeed, minCrewSize,
-                maxCrewSize, minRating, maxRating, null, 0, 3).size();
+                maxCrewSize, minRating, maxRating, null).size();
     }
 
     @GetMapping("/{id}")

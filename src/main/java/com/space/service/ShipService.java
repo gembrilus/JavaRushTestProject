@@ -20,9 +20,7 @@ public interface ShipService {
             Integer maxCrewSize,
             Double minRating,
             Double maxRating,
-            ShipOrder order,
-            Integer pageNumber,
-            Integer pageSize
+            ShipOrder order
     );
 
     List<Ship> getAllShipsByPage(Integer pageNumber, Integer pageSize, List<Ship> ships);

@@ -1,40 +1,26 @@
 package com.space.model;
 
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
 
 
 @Entity
-@Component
 public class Ship {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(length = 50)
     private String name;
-
-    @Column(length = 50)
     private String planet;
 
     @Enumerated(EnumType.STRING)
     private ShipType shipType;
 
-//    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     private Date prodDate;
-
     private Boolean isUsed;
-
-    @Column(precision = 3, scale = 2)
     private Double speed;
-
     private Integer crewSize;
-
-    @Column(scale = 2)
     private Double rating;
 
     public Long getId() {
